@@ -4,7 +4,7 @@
 
 // Định nghĩa cấu trúc treeNode
 typedef struct treeNode {
-    char* word;                // Lưu chuỗi thay vì ký tự
+    char* word;                
     struct treeNode* left;
     struct treeNode* right;
 } treeNode;
@@ -50,7 +50,7 @@ treeNode* buildfunction() {
     subtract2->right = f;
 
     treeNode* e = maketreenode("e");
-    treeNode* oneHalf = maketreenode("1/2");  // Thể hiện 1/2
+    treeNode* oneHalf = maketreenode("1/2");  
     treeNode* power2 = maketreenode("^");
     power2->left = e;
     power2->right = oneHalf;
@@ -71,7 +71,7 @@ void printOrder(treeNode* r) {
     if (r == NULL) return;
     if (r->left) printf("(");
     printOrder(r->left);
-    printf("%s", r->word);  // In chuỗi thay vì ký tự
+    printf("%s", r->word);  
     printOrder(r->right);
     if (r->right) printf(")");
 }
